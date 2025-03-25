@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'register',
     loadComponent: () => import('./pages/auth/register/register.page').then( m => m.RegisterPage)
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./pages/vendedores/home/home.page').then( m => m.HomePage)
   }
 ];
 @NgModule({
