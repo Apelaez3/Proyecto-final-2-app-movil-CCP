@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'home',
     loadComponent: () => import('./pages/vendedores/home/home.page').then( m => m.HomePage)
+  },
+  {
+    path: 'home-clientes',
+    loadComponent: () => import('./pages/clientes/home/home.page').then( m => m.HomePageClientes)
+  },
+  {
+    path: 'client-visit',
+    loadComponent: () => import('./pages/vendedores/client-visit/client-visit.page').then( m => m.ClientVisitPage)
   }
 ];
 @NgModule({
