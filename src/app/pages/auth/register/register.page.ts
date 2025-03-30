@@ -5,8 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterService } from '../../../services/register.service';
 import { AlertController } from '@ionic/angular';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-register',
@@ -39,7 +38,7 @@ export class RegisterPage  {
 
     this.registerService.registerClient(this.nombre, this.email, this.telefono, this.direccion, this.password).subscribe({
       next: async () => {
-        await this.mostrarAlerta('Éxito', 'Registro exitoso. Ahora puedes iniciar sesión.');
+        await this.mostrarAlerta('Éxito', 'Se ha registrado con exitoso a la app.');
         this.router.navigate(['/login']);
       },
       error: (err) => {
@@ -53,7 +52,7 @@ export class RegisterPage  {
     const alert = await this.alertCtrl.create({
       header: titulo,
       message: mensaje,
-      buttons: ['OK']
+      buttons: ['Cerrar']
     });
     await alert.present();
   }

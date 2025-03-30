@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro de Visita a Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <!-- Fecha y Hora -->
+    <ion-item>
+      <ion-label position="stacked"><strong>Fecha y Hora de la visita</strong></ion-label>
+      <ion-input placeholder="Ingrese su Fecha y Hora" type="datetime-local"></ion-input>
+    </ion-item>
+
+    <!-- Duración de la visita -->
+    <ion-item>
+      <ion-label position="stacked"><strong>Duración de la visita</strong></ion-label>
+      <ion-input placeholder="Ingrese duración en minutos" type="number"></ion-input>
+    </ion-item>
+
+    <!-- Observaciones -->
+    <ion-item>
+      <ion-label position="stacked"><strong>Observaciones</strong></ion-label>
+      <ion-textarea placeholder="Escriba sus observaciones"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <!-- Resultados -->
+  <div class="resultados-container">
+    <ion-label class="resultados-title"><strong>Resultados</strong></ion-label>
+    <div class="botones-resultados">
+      <ion-button fill="outline" color="primary">Interesado</ion-button>
+      <ion-button fill="outline" color="primary">No Interesado</ion-button>
+      <ion-button fill="outline" color="primary">Seguimiento</ion-button>
+    </div>
+  </div>
+
+  <!-- Botón de Sincronizar -->
+  <ion-button expand="full" class="boton-sincronizar">
+    Sincronizar Registro
+  </ion-button>
+</ion-content>
+
